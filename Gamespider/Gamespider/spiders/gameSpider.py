@@ -13,6 +13,6 @@ class GameSpider(scrapy.Spider):
         sel = Selector(response)
         item = GamespiderItem()
         item['GameName'] = sel.xpath('//h3/a/text()').extract()
-        item['Gamecontent'] = sel.xpath('//div[@class="info"]/dd').extract()
-        item['Gamestar'] = sel.xpath('//div[@class="score"]/div/text()').extract()
+        item['Gamecontent'] = sel.xpath('//div[@class="info"]/dl/text()').extract()
+        item['Gamestar'] = sel.xpath('//div[@class="info"]/div[@class="score"]/text()').extract()
         return item
