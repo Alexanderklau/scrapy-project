@@ -17,7 +17,9 @@ NEWSPIDER_MODULE = 'GameImage.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'GameImage (+http://www.yourdomain.com)'
-
+ITEM_PIPELINES = {
+   'GameImage.pipelines.GameimagePipeline': 1,
+}
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
