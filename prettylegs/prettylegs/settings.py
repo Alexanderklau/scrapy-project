@@ -21,6 +21,10 @@ NEWSPIDER_MODULE = 'prettylegs.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+ITEM_PIPELINES = {
+   'prettylegs.pipelines.PrettylegsPipeline': 1,
+}
+DOWNLOAD_DELAY = 0.25
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 

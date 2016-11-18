@@ -12,7 +12,6 @@ class PrettylegsSpider(scrapy.Spider):
     def parse(self, response):
         item = PrettylegsItem()
         item['imageUrl'] = response.xpath('//img//@src').extract()
-        item['imageHref'] = response.xpath('//a//@href').extract()
         yield item
 
 
