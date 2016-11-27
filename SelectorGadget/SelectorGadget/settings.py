@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for douban_book project
+# Scrapy settings for SelectorGadget project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,13 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'douban_book'
+BOT_NAME = 'SelectorGadget'
 
-SPIDER_MODULES = ['douban_book.spiders']
-NEWSPIDER_MODULE = 'douban_book.spiders'
+SPIDER_MODULES = ['SelectorGadget.spiders']
+NEWSPIDER_MODULE = 'SelectorGadget.spiders'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
+#USER_AGENT = 'SelectorGadget (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -38,10 +39,7 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {'Connection': 'Keep-Alive',
-                           'Accept': 'text/html, application/xhtml+xml, */*',
-                           'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
-                           'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko',}
+#DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
 #}
@@ -49,13 +47,13 @@ DEFAULT_REQUEST_HEADERS = {'Connection': 'Keep-Alive',
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'douban_book.middlewares.MyCustomSpiderMiddleware': 543,
+#    'SelectorGadget.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'douban_book.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'SelectorGadget.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -67,7 +65,7 @@ DEFAULT_REQUEST_HEADERS = {'Connection': 'Keep-Alive',
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'douban_book.pipelines.SomePipeline': 300,
+#    'SelectorGadget.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
