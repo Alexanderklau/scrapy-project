@@ -8,7 +8,7 @@ class findjobSpider(scrapy.Spider):
     start_urls = ['https://www.lagou.com/zhaopin/Java/1/']
 
     rules = (
-        Rule(LinkExtractor(allow=r'/\d/$'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'/\d/$'), callback='parse', follow=True),
 
     )
 
