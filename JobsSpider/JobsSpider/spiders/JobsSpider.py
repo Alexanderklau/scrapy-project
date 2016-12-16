@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 import json
 from scrapy.selector import Selector
@@ -13,6 +14,7 @@ from scrapy.contrib.linkextractors import LinkExtractor
 from ..items import JobsspiderItem
 class LagouJob(CrawlSpider):
     name = 'Jobs'
+    download_delay = 1
     allowed_domains = ["lagou.com"]
     start_urls = ["https://www.lagou.com/zhaopin"]
     rules = [Rule(LinkExtractor(allow=(r'/zhaopin/\d/')),

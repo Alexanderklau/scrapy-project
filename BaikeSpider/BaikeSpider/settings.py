@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for JobsSpider project
+# Scrapy settings for BaikeSpider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,27 +9,21 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'JobsSpider'
+BOT_NAME = 'BaikeSpider'
 
-SPIDER_MODULES = ['JobsSpider.spiders']
-NEWSPIDER_MODULE = 'JobsSpider.spiders'
+SPIDER_MODULES = ['BaikeSpider.spiders']
+NEWSPIDER_MODULE = 'BaikeSpider.spiders'
 
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'JobsSpider (+http://www.yourdomain.com)'
+#USER_AGENT = 'BaikeSpider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-DEFAULT_REQUEST_HEADERS = {'Connection': 'Keep-Alive',
-                           'Accept': 'text/html, application/xhtml+xml, */*',
-                           'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
-                           'Host': 'www.lagou.com',}
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
-ITEM_PIPELINES = {
-        'JobsSpider.pipelines.JobsspiderPipeline':300
-    }
+
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
@@ -53,13 +47,13 @@ ITEM_PIPELINES = {
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'JobsSpider.middlewares.MyCustomSpiderMiddleware': 543,
+#    'BaikeSpider.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'JobsSpider.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'BaikeSpider.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -71,7 +65,7 @@ ITEM_PIPELINES = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'JobsSpider.pipelines.SomePipeline': 300,
+#    'BaikeSpider.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
