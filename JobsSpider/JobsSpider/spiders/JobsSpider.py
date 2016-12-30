@@ -33,7 +33,7 @@ class LagouJob(CrawlSpider):
                 item['JobsLink'] = site.xpath("//li/div[1]/div[1]/div[1]/a/@href").extract()
                 item['JobsRick'] = site.xpath("//li/@data-salary").extract()
                 item['JobRequire'] = site.xpath("//li/div[2]/div[2]/text()").extract()
-                item['Jobinstry'] = site.xpath("//li/div[1]/div[2]/div[2]/text()").extract()
+                item['Jobinstry'] = site.xpath("//li/div[1]/div[2]/div[2]/text()")[0].text
             except:
                 pass
             items.append(item)
