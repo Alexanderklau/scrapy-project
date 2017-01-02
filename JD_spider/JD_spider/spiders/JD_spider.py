@@ -1,3 +1,4 @@
+import re
 import scrapy
 from ..items import goodsItem
 from scrapy.selector import Selector
@@ -16,11 +17,31 @@ class JD_spider(scrapy.Spider):
             js = json.load(str(s))
             item1['price'] = js['p']
             return item1
+        def parse_getCommentnum(self, response):
+            item1 = response.meta['item']
+            js = json.loads(str(response.body))
+            item1['score1count'] = js['productCommentSummary'][0]['goodCount']
+            num = item1['ID']
+            s1 = str(num)
+            #https://p.3.cn/prices/mgets?callback=jQuer&pdpin=&pdbp=0&skuIds=J_2385681
+            url = "https://p.3.cn/prices/mgets?callback=jQuer&pdpin=&pdbp=0&skuIds=J_" + s1[3:-2]
+            yield scrapy.Request(url, meta={'item': item1}, callback=self.parse_price)
         def parse_detail(self, response):
             item1 = response.meta['item']
             sel = Selector.response()
 
-            temp =
+            temp = response.body.split('commentVersion:')
+            pattern = re.compile("[\'](\d+)[\']")
+            if len(temp) < 2:
+                item1['commentVersion'] = -1
+            else:
+                match = pattern.match(temp[1][:10])
+                item1['commentVersion'] = match.group()
+            #https://club.jd.com/comment/productPageComments.action?
+            #callback=fetchJSON_comment98vv59634&productId=3245084
+            #&score=0&sortType=5&page=0&pageSize=10&isShadowSku=0
+            url = "https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv59634&productId=" + str(item1['ID'][0]) + "&score=0&sortType=5&page=0&pageSize=10&isShadowSku=0"
+            yield scrapy.Request(url,meta={'item':item1},callback=self.parse_getCommentnum)
 
 
         def parse(self, response):

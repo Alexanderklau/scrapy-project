@@ -20,6 +20,11 @@ class goodsItem(scrapy.Item):
     price = scrapy.Field()
     comment_num = scrapy.Field()
     shop_name = scrapy.Field()
-    commentVersion = Field()
+    commentVersion = scrapy.Field()
+    score1count = scrapy.Field()  # 评分为1星的人数
+    score2count = scrapy.Field()  # 评分为2星的人数
+    score3count = scrapy.Field()  # 评分为3星的人数
+    score4count = scrapy.Field()  # 评分为4星的人数
+    score5count = scrapy.Field()  # 评分为5星的人数
 
 
