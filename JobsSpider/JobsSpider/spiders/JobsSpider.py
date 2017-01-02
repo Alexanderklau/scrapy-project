@@ -27,8 +27,8 @@ class LagouJob(CrawlSpider):
             item = JobsspiderItem()
             try:
                 item['Jobsname'] = site.xpath("//li/div[1]/div[2]/div[1]/a/text()").extract()
-                item['Jobscatalog'] = sites.xpath("//li/div[1]/div[1]/div[1]/a/h2/text()").extract()
-                item['JobsLocation'] = sites.xpath("//li/div[1]/div[1]/div[1]/a/span/em/text()").extract()
+                item['Jobscatalog'] = site.xpath("//li/div[1]/div[1]/div[1]/a/h2/text()").extract()
+                item['JobsLocation'] = site.xpath("//li/div[1]/div[1]/div[1]/a/span/em/text()").extract()
                 item['JobsPublishTime'] = site.xpath("//li/div[1]/div[1]/div[1]/span/text()").extract()
                 item['JobsLink'] = site.xpath("//li/div[1]/div[1]/div[1]/a/@href").extract()
                 item['JobsRick'] = site.xpath("//li/@data-salary").extract()
