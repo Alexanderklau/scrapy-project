@@ -1,6 +1,5 @@
 import scrapy
 from ..items import GamemessagespiderItem
-import json
 from scrapy.selector import Selector
 import json
 
@@ -13,9 +12,11 @@ class Game_Spider(scrapy.Spider):
 
     def parse_star(self,response):
         item1 = response.meta['item']
-        temp1 = response.body.split('jQuery(')
-        s = temp1[1][:-4]
-        js = json.load(str(s))
+        wb_data = response.body.decode('utf-8')
+        s = wb_data[7:-2]
+        js = json.loads(str(s))
+        # star = wb_data[1][:-2]
+        # js = json.loads(str(star))
         item1['star'] = js['Average']
         return item1
 
@@ -30,8 +31,9 @@ class Game_Spider(scrapy.Spider):
             item1['type'] = game.xpath('//div[4]/text()').extract()
             item1['ID'] = game.xpath('//div[6]/@data-generalid').extract()
             num = item1['ID']
-            s1 = str(num)
-            url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + s1[3:-2]
+            s = str(num)
+            url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + s[2:-2]
+            # print(url)
             yield scrapy.Request(url,meta={'item':item1},callback=self.parse_star)
 
 
