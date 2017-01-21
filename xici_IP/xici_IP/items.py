@@ -13,8 +13,8 @@ class XiciIpItem(scrapy.Item):
     # name = scrapy.Field()
     IP = scrapy.Field()
     PORT = scrapy.Field()
-    POSITION = scrapy.Field()
-    TYPE = scrapy.Field()
+    IPPOSITION = scrapy.Field()
+    IPTYPE = scrapy.Field()
     SPEED = scrapy.Field()
     LAST_CHECK_TIME = scrapy.Field()
 

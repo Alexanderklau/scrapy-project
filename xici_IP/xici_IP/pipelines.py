@@ -19,8 +19,26 @@ class XiciIpPipeline(object):
 from twisted.enterprise import adbapi
 import pymysql
 import pymysql.cursors
+# from .settings import DBKWARGS
 class XiciSqlitePipline(object):
-    def __init__(self):
-        dbargs = dict(
-            host = '127.0.0.1'
-        )
+    def parse_item(self,item,spider):
+        DBKWARGS = spider.seettings.get('DBKWARGS')
+        con = pymysql.connect(**DBKWARGS)
+        cur = con.curson()
+        sql = ("insert into proxy(IP,PROT,IPTYPE,IPPOSITION,SPEED,LAST_CHECK_TIME) "
+               "VALUES (%s,%s,%s,%s,%s,%s)")
+        lis = (item['IP'],item['SPEED'],item['PROT'],item['IPTYPE'],item['IPPOSITION'],
+                item['LAST_CHECK_TIME'])
+        try:
+            cur.execute(sql,lis)
+        except Exception as e:
+            print("Insert error:",e)
+            con.rollback()
+        else:
+            con.comit()
+        cur.close()
+        con.close()
+        return item
+
+
+

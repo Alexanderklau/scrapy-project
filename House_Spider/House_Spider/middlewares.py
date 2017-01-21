@@ -9,7 +9,7 @@ class RandomUserAgent(object):
 	def from_crawler(cls, crawler):
 		return cls(crawler.settings.getlist('USER_AGENTS'))
 	def process_request(self, request, spider):
-		#print "**************************" + random.choice(self.agents)
+		print( "**************************" + random.choice(self.agents))
 		request.headers.setdefault('User-Agent', random.choice(self.agents))
 class ProxyMiddleware(object):
 	def process_request(self, request, spider):

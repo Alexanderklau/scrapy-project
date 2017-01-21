@@ -61,11 +61,15 @@ COOKIES_ENABLED = False
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
-
+DBKWARGS = {
+   'db':'Xici_IP','user':'lau','passwd':'',
+   'host':'localhost','port':3306,'use_unicode':True,'charset':'utf8'
+}
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'xici_IP.pipelines.XiciIpPipeline': 300,
+   'xici_IP.pipelines.XiciSqlitePipline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

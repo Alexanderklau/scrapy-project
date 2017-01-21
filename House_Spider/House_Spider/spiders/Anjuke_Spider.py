@@ -34,14 +34,14 @@ class House_Spider(scrapy.Spider):
             # print(type(eval(area)))
             item1['HouseArea'] = eval(area)
             item1['HouseContent'] = house.xpath('//p[2]/span/text()').extract()
-            return item1
+            # return item1
             # # url = house.xpath('//@link').extract()
-            # for base_url in response.xpath('//@link'):
-            #     list_a = response.urljoin(base_url.extract())
-            #     print(list_a)
-                # yield scrapy.Request(list_a, meta={'item': item1}, callback=self.parse_Phone)
-    # def parse_Phone(self,response):
-        # item1 = response.meta['item']
-        # sel = Selector(response)
-        # item1['PhoneNumber'] = sel.xpath('//div[@class="icon_tel"]/text()').extract()
-        # return item1
+            for base_url in response.xpath('//@link'):
+                list_a = response.urljoin(base_url.extract())
+                print(list_a)
+                yield scrapy.Request(list_a, meta={'item': item1}, callback=self.parse_Phone)
+    def parse_Phone(self,response):
+        item1 = response.meta['item']
+        sel = Selector(response)
+        item1['PhoneNumber'] = sel.xpath('//div[@class="icon_tel"]/text()').extract()
+        return item1
