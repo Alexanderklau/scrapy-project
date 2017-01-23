@@ -38,7 +38,7 @@ class House_Spider(scrapy.Spider):
             # # url = house.xpath('//@link').extract()
             for base_url in response.xpath('//@link'):
                 list_a = response.urljoin(base_url.extract())
-                print(list_a)
+                # print(list_a)
                 yield scrapy.Request(list_a, meta={'item': item1}, callback=self.parse_Phone)
     def parse_Phone(self,response):
         item1 = response.meta['item']

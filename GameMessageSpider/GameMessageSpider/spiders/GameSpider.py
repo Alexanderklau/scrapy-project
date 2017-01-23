@@ -17,6 +17,7 @@ class Game_Spider(scrapy.Spider):
         js = json.loads(str(s))
         # star = wb_data[1][:-2]
         # js = json.loads(str(star))
+
         item1['star'] = js['Average']
         return item1
 
@@ -29,12 +30,12 @@ class Game_Spider(scrapy.Spider):
             item1['date'] = game.xpath('//div[3]/text()').extract()
             item1['launage'] = game.xpath('//div[4]/text()').extract()
             item1['type'] = game.xpath('//div[4]/text()').extract()
-            item1['ID'] = game.xpath('//div[6]/@data-generalid').extract()
-            num = item1['ID']
-            s = str(num)
-            url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + s[2:-2]
-            # print(url)
-            yield scrapy.Request(url,meta={'item':item1},callback=self.parse_star)
+            ID = game.xpath('//div[6]/@data-generalid').extract()
+            for id in ID:
+                text = id
+                url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + str(text)
+                list_a = response.urljoin(url)
+                yield scrapy.Request(list_a,meta={'item':item1},callback=self.parse_star)
 
 
 #http://i.gamersky.com/apirating/init?callback=jQuery&generalId=365014

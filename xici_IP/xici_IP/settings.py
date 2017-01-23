@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'xici_IP.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
+# USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -52,9 +52,11 @@ COOKIES_ENABLED = False
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'xici_IP.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
+   # 'xici_IP.middlewares.MyCustomDownloaderMiddleware': 543,
+   'xici_IP.route_agent.RotateUserAgentMiddleware': 400,
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -62,13 +64,18 @@ COOKIES_ENABLED = False
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 DBKWARGS = {
-   'db':'Xici_IP','user':'lau','passwd':'',
-   'host':'localhost','port':3306,'use_unicode':True,'charset':'utf8'
+   'db':'xici',
+   'user':'root',
+   'passwd':'',
+   'host':'localhost',
+   # 'port':3306,
+   'use_unicode':True,
+   'charset':'utf8',
 }
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'xici_IP.pipelines.XiciIpPipeline': 300,
+   # 'xici_IP.pipelines.XiciIpPipeline': 300,
    'xici_IP.pipelines.XiciSqlitePipline': 300,
 }
 
