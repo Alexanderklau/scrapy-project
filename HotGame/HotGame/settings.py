@@ -20,10 +20,12 @@ NEWSPIDER_MODULE = 'HotGame.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-
+LOG_FILE = "scrapy.log"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
-
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 301,
+}
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs

@@ -6,20 +6,23 @@ import json
 class Game_Spider(scrapy.Spider):
     name = 'game'
     start_urls = []
-    for i in range(1,11):
+    for i in range(1,2):
         url = 'http://down.gamersky.com/page/pc/0-0-0-0-0-0-0-00_' + str(i) + '.html'
         start_urls.append(url)
 
     def parse_star(self,response):
         item1 = response.meta['item']
         wb_data = response.body.decode('utf-8')
-        s = wb_data[7:-2]
-        js = json.loads(str(s))
+        s = str(wb_data[7:-2])
+        js = json.loads(s)
+        item1['star'] = js['Average']
+        return item1
         # star = wb_data[1][:-2]
         # js = json.loads(str(star))
 
-        item1['star'] = js['Average']
-        return item1
+        # for jst in js:
+        #     item1['star'] = jst['Average']
+        #     return item1
 
     def parse(self, response):
         sel = Selector(response)
@@ -32,10 +35,9 @@ class Game_Spider(scrapy.Spider):
             item1['type'] = game.xpath('//div[4]/text()').extract()
             ID = game.xpath('//div[6]/@data-generalid').extract()
             for id in ID:
-                text = id
-                url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + str(text)
-                list_a = response.urljoin(url)
-                yield scrapy.Request(list_a,meta={'item':item1},callback=self.parse_star)
+                url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + str(id)
+                # list_a = response.urljoin(url)
+                yield scrapy.Request(url,meta={'item':item1},callback=self.parse_star)
 
 
 #http://i.gamersky.com/apirating/init?callback=jQuery&generalId=365014

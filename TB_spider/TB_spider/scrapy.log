@@ -1,0 +1,63 @@
+2017-01-25 23:20:33 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:20:33 [scrapy] INFO: Overridden settings: {'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'TB_spider', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'LOGSTATS_INTERVAL': 0, 'SPIDER_MODULES': ['TB_spider.spiders']}
+2017-01-25 23:20:33 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:20:33 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:20:33 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:20:33 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:20:33 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:20:33 [root] DEBUG: Using default logger
+2017-01-25 23:20:33 [root] DEBUG: Using default logger
+2017-01-25 23:21:03 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:21:03 [scrapy] INFO: Overridden settings: {'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'BOT_NAME': 'TB_spider', 'SPIDER_MODULES': ['TB_spider.spiders'], 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'LOGSTATS_INTERVAL': 0, 'ROBOTSTXT_OBEY': True, 'LOG_FILE': 'scrapy.log', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
+2017-01-25 23:21:03 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-01-25 23:21:03 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:21:03 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:21:03 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:21:03 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:21:03 [scrapy] INFO: Spider opened
+2017-01-25 23:21:04 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:21:04 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:21:04 [root] DEBUG: Using default logger
+2017-01-25 23:21:04 [root] DEBUG: Using default logger

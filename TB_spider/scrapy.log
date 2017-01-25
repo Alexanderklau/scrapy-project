@@ -1,0 +1,571 @@
+2017-01-25 23:10:56 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:10:56 [scrapy] INFO: Overridden settings: {'LOG_FILE': 'scrapy.log', 'FEED_URI': 'Tm.csv', 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'SPIDER_MODULES': ['TB_spider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'TB_spider', 'FEED_FORMAT': 'csv'}
+2017-01-25 23:10:56 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-01-25 23:10:56 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:10:56 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:10:56 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:10:56 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:10:56 [scrapy] INFO: Spider opened
+2017-01-25 23:10:56 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:10:56 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:10:57 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:10:57 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d%20%20%20%20%20%20%20%20%20&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:10:57 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:10:57 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 10, 57, 317780),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 10, 56, 568978)}
+2017-01-25 23:10:57 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:11:03 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:11:03 [scrapy] INFO: Overridden settings: {'SPIDER_MODULES': ['TB_spider.spiders'], 'ROBOTSTXT_OBEY': True, 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'BOT_NAME': 'TB_spider', 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'FEED_FORMAT': 'csv', 'LOG_FILE': 'scrapy.log', 'FEED_URI': 'Tm.csv'}
+2017-01-25 23:11:03 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-01-25 23:11:03 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:11:03 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:11:03 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:11:03 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:11:03 [scrapy] INFO: Spider opened
+2017-01-25 23:11:03 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:11:03 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:11:04 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:11:04 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d%20%20%20%20%20%20%20%20%20&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:11:04 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:11:04 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 11, 4, 379810),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 11, 3, 781840)}
+2017-01-25 23:11:04 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:12:18 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:12:18 [scrapy] INFO: Overridden settings: {'FEED_FORMAT': 'csv', 'ROBOTSTXT_OBEY': True, 'FEED_URI': 'Tm.csv', 'SPIDER_MODULES': ['TB_spider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'TB_spider', 'NEWSPIDER_MODULE': 'TB_spider.spiders'}
+2017-01-25 23:12:18 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-01-25 23:12:18 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:12:18 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:12:18 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:12:18 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:12:18 [scrapy] INFO: Spider opened
+2017-01-25 23:12:18 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:12:18 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:12:18 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:12:18 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d%20%20%20%20%20%20%20%20%20&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:12:18 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:12:18 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 12, 18, 712283),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 12, 18, 217717)}
+2017-01-25 23:12:18 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:12:45 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:12:45 [scrapy] INFO: Overridden settings: {'FEED_URI': 'Tm.csv', 'LOG_FILE': 'scrapy.log', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'SPIDER_MODULES': ['TB_spider.spiders'], 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'ROBOTSTXT_OBEY': True, 'FEED_FORMAT': 'csv', 'BOT_NAME': 'TB_spider'}
+2017-01-25 23:12:45 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:12:45 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:12:45 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:12:45 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:12:45 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:12:45 [scrapy] INFO: Spider opened
+2017-01-25 23:12:45 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:12:45 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:12:45 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:12:45 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d%20%20%20%20%20%20%20%20%20&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:12:45 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:12:45 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 12, 45, 965400),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 12, 45, 495353)}
+2017-01-25 23:12:45 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:13:09 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:13:09 [scrapy] INFO: Overridden settings: {'BOT_NAME': 'TB_spider', 'LOG_FILE': 'scrapy.log', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'SPIDER_MODULES': ['TB_spider.spiders'], 'ROBOTSTXT_OBEY': True}
+2017-01-25 23:13:09 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:13:09 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:13:09 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:13:09 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:13:09 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:13:09 [scrapy] INFO: Spider opened
+2017-01-25 23:13:09 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:13:09 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:13:09 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:13:09 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d%20%20%20%20%20%20%20%20%20&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:13:09 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:13:09 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 13, 9, 658178),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 13, 9, 138094)}
+2017-01-25 23:13:09 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:15:21 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:15:21 [scrapy] INFO: Overridden settings: {'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'TB_spider', 'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'SPIDER_MODULES': ['TB_spider.spiders']}
+2017-01-25 23:15:21 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-01-25 23:15:21 [py.warnings] WARNING: /home/lau/anaconda3/lib/python3.5/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-01-25 23:15:21 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:15:21 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:15:21 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:15:21 [scrapy] INFO: Spider opened
+2017-01-25 23:15:21 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:15:21 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:15:21 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:15:21 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:15:21 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:15:21 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 15, 21, 877711),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 15, 21, 219133)}
+2017-01-25 23:15:21 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:15:59 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:15:59 [scrapy] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'TB_spider', 'SPIDER_MODULES': ['TB_spider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'}
+2017-01-25 23:16:00 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-01-25 23:16:00 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:16:00 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:16:00 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:16:00 [scrapy] INFO: Spider opened
+2017-01-25 23:16:00 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-01-25 23:16:00 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:16:00 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:16:00 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:16:00 [scrapy] INFO: Closing spider (finished)
+2017-01-25 23:16:00 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 257,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 291,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 1, 25, 15, 16, 0, 601458),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 1, 25, 15, 16, 0, 65263)}
+2017-01-25 23:16:00 [scrapy] INFO: Spider closed (finished)
+2017-01-25 23:19:26 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:19:26 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'TB_spider.spiders', 'LOG_FILE': 'scrapy.log', 'LOGSTATS_INTERVAL': 0, 'SPIDER_MODULES': ['TB_spider.spiders'], 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'TB_spider', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
+2017-01-25 23:19:26 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:19:26 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:19:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:19:26 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:19:26 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:19:27 [scrapy] INFO: Spider opened
+2017-01-25 23:19:27 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:19:27 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:19:27 [root] DEBUG: Using default logger
+2017-01-25 23:19:27 [root] DEBUG: Using default logger
+2017-01-25 23:23:09 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:23:09 [scrapy] INFO: Overridden settings: {'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'SPIDER_MODULES': ['TB_spider.spiders'], 'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'TB_spider', 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'LOGSTATS_INTERVAL': 0, 'ROBOTSTXT_OBEY': True, 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
+2017-01-25 23:23:09 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:23:09 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:23:09 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:23:09 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:23:09 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:23:09 [scrapy] INFO: Spider opened
+2017-01-25 23:23:10 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:23:10 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:23:10 [root] DEBUG: Using default logger
+2017-01-25 23:23:10 [root] DEBUG: Using default logger
+2017-01-25 23:23:46 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:23:46 [scrapy] INFO: Overridden settings: {'LOGSTATS_INTERVAL': 0, 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'BOT_NAME': 'TB_spider', 'ROBOTSTXT_OBEY': True, 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'LOG_FILE': 'scrapy.log', 'SPIDER_MODULES': ['TB_spider.spiders']}
+2017-01-25 23:23:46 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:23:46 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:23:46 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:23:46 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:23:46 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:23:46 [scrapy] INFO: Spider opened
+2017-01-25 23:23:46 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:23:46 [scrapy] DEBUG: Forbidden by robots.txt: <GET https://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:23:46 [root] DEBUG: Using default logger
+2017-01-25 23:23:46 [root] DEBUG: Using default logger
+2017-01-25 23:24:01 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:24:01 [scrapy] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['TB_spider.spiders'], 'LOG_FILE': 'scrapy.log', 'LOGSTATS_INTERVAL': 0, 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'BOT_NAME': 'TB_spider', 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
+2017-01-25 23:24:01 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-01-25 23:24:01 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:24:01 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:24:01 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:24:01 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:24:01 [scrapy] INFO: Spider opened
+2017-01-25 23:24:03 [scrapy] DEBUG: Retrying <GET http://https/robots.txt> (failed 1 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] DEBUG: Retrying <GET http://https/robots.txt> (failed 2 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] DEBUG: Gave up retrying <GET http://https/robots.txt> (failed 3 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] ERROR: Error downloading <GET http://https/robots.txt>: DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+Traceback (most recent call last):
+  File "/home/lau/anaconda3/lib/python3.5/site-packages/twisted/internet/defer.py", line 1183, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/lau/anaconda3/lib/python3.5/site-packages/twisted/python/failure.py", line 389, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/lau/anaconda3/lib/python3.5/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.internet.error.DNSLookupError: DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] DEBUG: Retrying <GET http://https//list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter> (failed 1 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] DEBUG: Retrying <GET http://https//list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter> (failed 2 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:03 [scrapy] DEBUG: Gave up retrying <GET http://https//list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter> (failed 3 times): DNS lookup failed: address 'https' not found: [Errno -2] Name or service not known.
+2017-01-25 23:24:13 [scrapy] INFO: Scrapy 1.1.2 started (bot: TB_spider)
+2017-01-25 23:24:13 [scrapy] INFO: Overridden settings: {'BOT_NAME': 'TB_spider', 'LOGSTATS_INTERVAL': 0, 'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'TB_spider.spiders', 'SPIDER_MODULES': ['TB_spider.spiders'], 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0', 'LOG_FILE': 'scrapy.log'}
+2017-01-25 23:24:13 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-01-25 23:24:13 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-01-25 23:24:13 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-01-25 23:24:13 [scrapy] INFO: Enabled item pipelines:
+[]
+2017-01-25 23:24:13 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-01-25 23:24:13 [scrapy] INFO: Spider opened
+2017-01-25 23:24:13 [scrapy] DEBUG: Redirecting (301) to <GET https://list.tmall.com/robots.txt> from <GET http://list.tmall.com/robots.txt>
+2017-01-25 23:24:13 [scrapy] DEBUG: Crawled (200) <GET https://list.tmall.com/robots.txt> (referer: None)
+2017-01-25 23:24:13 [scrapy] DEBUG: Forbidden by robots.txt: <GET http://list.tmall.com/search_product.htm?type=pc&totalPage=100&cat=50025135&sort=d&style=g&from=sn_1_cat-qp&active=1&jumpto=10#J_Filter>
+2017-01-25 23:24:13 [root] DEBUG: Using default logger
+2017-01-25 23:24:13 [root] DEBUG: Using default logger
