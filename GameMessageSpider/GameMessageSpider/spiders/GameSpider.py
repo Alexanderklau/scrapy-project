@@ -2,6 +2,7 @@ import scrapy
 from ..items import GamemessagespiderItem
 from scrapy.selector import Selector
 import json
+import re
 
 class Game_Spider(scrapy.Spider):
     name = 'game'
@@ -17,22 +18,23 @@ class Game_Spider(scrapy.Spider):
         js = json.loads(s)
         item1['star'] = js['Average']
         return item1
-        # star = wb_data[1][:-2]
-        # js = json.loads(str(star))
+        star = wb_data[1][:-2]
+        js = json.loads(str(star))
 
-        # for jst in js:
-        #     item1['star'] = jst['Average']
-        #     return item1
+        for jst in js:
+            item1['star'] = jst['Average']
+            return item1
 
     def parse(self, response):
         sel = Selector(response)
         games = sel.xpath('//html/body/div/ul/li')
         for game in games:
             item1 = GamemessagespiderItem()
-            item1['name'] = game.xpath('//div[2]/a/text()').extract()
+            item1['name'] = game.xpath('//div[2]/a/text()').re(r'《.*?》')
             item1['date'] = game.xpath('//div[3]/text()').extract()
-            item1['launage'] = game.xpath('//div[4]/text()').extract()
-            item1['type'] = game.xpath('//div[4]/text()').extract()
+            item1['launage'] = game.xpath('//div[5]/text()').re(r'游戏语言：\s*(.*)')
+            item1['type'] = game.xpath('//div[4]/text()').re(r'游戏类型：\s*(.*)')
+            return item1
             ID = game.xpath('//div[6]/@data-generalid').extract()
             for id in ID:
                 url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + str(id)
