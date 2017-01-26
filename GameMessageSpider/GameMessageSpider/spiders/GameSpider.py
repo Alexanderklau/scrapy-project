@@ -18,12 +18,12 @@ class Game_Spider(scrapy.Spider):
         js = json.loads(s)
         item1['star'] = js['Average']
         return item1
-        star = wb_data[1][:-2]
-        js = json.loads(str(star))
-
-        for jst in js:
-            item1['star'] = jst['Average']
-            return item1
+        # # star = wb_data[1][:-2]
+        # js = json.loads(str(star))
+        #
+        # for jst in js:
+        #     item1['star'] = jst['Average']
+        #     return item1
 
     def parse(self, response):
         sel = Selector(response)
@@ -34,7 +34,7 @@ class Game_Spider(scrapy.Spider):
             item1['date'] = game.xpath('//div[3]/text()').extract()
             item1['launage'] = game.xpath('//div[5]/text()').re(r'游戏语言：\s*(.*)')
             item1['type'] = game.xpath('//div[4]/text()').re(r'游戏类型：\s*(.*)')
-            return item1
+            # return item1
             ID = game.xpath('//div[6]/@data-generalid').extract()
             for id in ID:
                 url = 'http://i.gamersky.com/apirating/init?callback=jQuery&generalId=' + str(id)
