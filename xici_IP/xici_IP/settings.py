@@ -64,7 +64,7 @@ DOWNLOADER_MIDDLEWARES = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 DBKWARGS = {
-   'db':'xici',
+   'db':'xici_IP',
    'user':'root',
    'passwd':'',
    'host':'localhost',
@@ -76,7 +76,7 @@ DBKWARGS = {
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'xici_IP.pipelines.XiciIpPipeline': 300,
-   'xici_IP.pipelines.XiciSqlitePipline': 300,
+   'xici_IP.pipelines.CollectipsPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
