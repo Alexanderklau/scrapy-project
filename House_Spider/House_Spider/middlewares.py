@@ -1,24 +1,21 @@
-import random
+__author__ = 'Yemilice_lau'
 import base64
-from .settings import PROXIES
-class RandomUserAgent(object):
-	"""Randomly rotate user agents based on a list of predefined ones"""
-	def __init__(self, agents):
-		self.agents = agents
-	@classmethod
-	def from_crawler(cls, crawler):
-		return cls(crawler.settings.getlist('USER_AGENTS'))
-	def process_request(self, request, spider):
-		print( "**************************" + random.choice(self.agents))
-		request.headers.setdefault('User-Agent', random.choice(self.agents))
+
+# Start your middleware class
 class ProxyMiddleware(object):
-	def process_request(self, request, spider):
-		proxy = random.choice(PROXIES)
-		if proxy['user_pass'] is not None:
-			request.meta['proxy'] = "http://%s" % proxy['ip_port']
-			encoded_user_pass = base64.encodestring(proxy['user_pass'])
-			request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
-			print(("**************ProxyMiddleware have pass************" + proxy['ip_port']))
-		else:
-			print(("**************ProxyMiddleware no pass************" + proxy['ip_port']))
-			request.meta['proxy'] = "http://%s" % proxy['ip_port']
+ # overwrite process request
+ def process_request(self, request, spider):
+  # Set the location of the proxy
+  request.meta['proxy'] = "http://YOUR_PROXY_IP:PORT"
+  # Use the following lines if your proxy requires authentication
+  proxy_user_pass = "USERNAME:PASSWORD"
+  # setup basic authentication for the proxy
+  encoded_user_pass = base64.encodestring(proxy_user_pass)
+  request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
+
+# 2.在项目配置文件里(./project_name/settings.py)添加
+#
+# DOWNLOADER_MIDDLEWARES = {
+#  'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
+#  'project_name.middlewares.ProxyMiddleware': 100,
+# }
