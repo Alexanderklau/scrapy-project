@@ -15,11 +15,11 @@ class Douban_Spider(scrapy.Spider):
         sel = Selector(response)
         movies = sel.xpath('//html/body/div[3]/div[1]/div/div[1]/ol')
         for movie in movies:
-            item1 = DoubanMovieItem()
-            item1['name'] = movie.xpath('//li/div/div[2]/div[1]/a/span[1]/text()').extract()
-            item1['star'] = movie.xpath('//li/div/div[2]/div[2]/div/span[2]/text()').extract()
-            item1['introduction'] = movie.xpath('//li/div/div[2]/div[2]/p[2]/span/text()').extract()
-            return item1
+            item = DoubanMovieItem()
+            item['name'] = movie.xpath('//li/div/div[2]/div[1]/a/span[1]/text()').extract()
+            item['star'] = movie.xpath('//li/div/div[2]/div[2]/div/span[2]/text()').extract()
+            item['introduction'] = movie.xpath('//li/div/div[2]/div[2]/p[2]/span/text()').extract()
+            yield item
 
 
 

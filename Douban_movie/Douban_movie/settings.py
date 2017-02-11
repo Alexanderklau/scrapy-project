@@ -13,7 +13,10 @@ BOT_NAME = 'Douban_movie'
 
 SPIDER_MODULES = ['Douban_movie.spiders']
 NEWSPIDER_MODULE = 'Douban_movie.spiders'
-
+MOGGODB_HOST = '127.0.0.1'
+MOGGODB_PORT = 27017
+MOGGODB_DBNAME = 'Game'
+MOGGODB_DOCNAME = 'game_message'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'
@@ -64,9 +67,9 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Douban_movie.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Douban_movie.pipelines.DoubanMoviePipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
